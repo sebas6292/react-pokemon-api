@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles.css';
 
-const PokeInfo = ({data}) => {
+const PokeInfo = ({ data }) => {
   return (
     <>
     {
@@ -25,6 +25,7 @@ const PokeInfo = ({data}) => {
             })
           }
       </div>
+      
       <div className="stats">
           {
             data.stats.map(poke => {

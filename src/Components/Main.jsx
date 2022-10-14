@@ -19,7 +19,6 @@ const Main = () => {
     setPrevUrl(res.data.previous)
     getPokemon(res.data.results)
     setLoading(false)
- 
   };
 
   const getPokemon = async(res) => {
@@ -29,7 +28,6 @@ const Main = () => {
         state = [...state, result.data]
         state.sort((a,b) => a.id > b.id ? 1 : -1)
         return state;
-     
       })
     })
   }
@@ -41,23 +39,37 @@ const Main = () => {
   return (
     <>
       <div className="container">
+
         <div className="left-content">
-          <Card pokemon={pokeData} loading={loading} infoPokemon={ poke => setPokeDex(poke) }/>
+          <Card 
+            pokemon={pokeData} 
+            loading={loading} 
+            infoPokemon={poke => setPokeDex(poke)}
+          />
 
           <div className="btn-group">
-            { prevUrl && <button onClick={()=> {
-              setPokeData([])
-              setUrl(prevUrl)
-            }}>Previous</button>}
-            { nextUrl && <button onClick={() => {
-              setPokeData([])
-              setUrl(nextUrl)
-            }}>Next</button>}
+              { prevUrl && 
+                <button onClick={()=> {
+                setPokeData([])
+                setUrl(prevUrl)
+              }}>
+              Previous
+              </button>}
+
+              { nextUrl && 
+                <button onClick={() => {
+                setPokeData([])
+                setUrl(nextUrl)
+              }}>
+              Next
+              </button>}
           </div>
         </div>
+
         <div className="right-content">
           <PokeInfo data={pokeDex}/>
         </div>
+
       </div>
     </>
   );
