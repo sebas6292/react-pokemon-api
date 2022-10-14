@@ -1,7 +1,7 @@
 import React from 'react';
+import './styles.css';
 
 const PokeInfo = ({data}) => {
-  console.log(data)
   return (
     <>
     {
@@ -17,9 +17,9 @@ const PokeInfo = ({data}) => {
             data.abilities.map(poke => {
               return (
                 <>
-                <div className="group">
-                <h2>{poke.ability.name}</h2>
-                </div>
+                  <div className="group">
+                    <h2>{poke.ability.name}</h2>
+                  </div>
                 </>
               )
             })
@@ -39,8 +39,6 @@ const PokeInfo = ({data}) => {
         </>
       )
     }
-
-      
     </>
   );
 };

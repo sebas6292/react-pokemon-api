@@ -5,11 +5,14 @@
   font-family: 'Roboto', sans-serif;
 }
 body{
-  background-color: #FCEEC8;
+  background-color: lightseagreen;
 }
 .container{
   width: 90%;
-  margin: auto;
+    /* calculates how much width you want the box/container to take up */
+  margin: auto; 
+  /* You can set the margin property to auto 
+  to horizontally center the element within its container. */
   padding-top: 100px;
   display: flex;
 }
@@ -22,7 +25,7 @@ body{
   grid-gap:2rem;
 }
 .card{
-  width: 300px;
+  width: 350px;
   background-color:#9EDEF9;
   border-radius: 1rem;
   box-shadow: 0 5px 5px rgba(0,0,0,0.5);
@@ -56,6 +59,7 @@ body{
   justify-content: center;
   align-items: center;
   margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 .abilities .group{
   background-color: #b74555;
